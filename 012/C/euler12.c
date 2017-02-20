@@ -65,7 +65,9 @@ numFactors(int num)
     if (num%i == 0)
       nod += 2;
   }
-  if (tmp * tmp == num) // correction if the number is a perfect square, where p = q and we don't want to overcount.
+  // correction if the number is a perfect square, where p = q 
+  // (p < sqrt(n) is the same as the correspondent q > sqrt(n))
+  if (tmp * tmp == num) 
   {
     nod--;
   }
